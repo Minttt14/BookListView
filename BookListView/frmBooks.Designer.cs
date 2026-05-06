@@ -38,11 +38,11 @@
             this.lstBorrow = new System.Windows.Forms.ListBox();
             this.imgL = new System.Windows.Forms.ImageList(this.components);
             this.imgS = new System.Windows.Forms.ImageList(this.components);
-            this.pnlBooks = new System.Windows.Forms.Panel();
+            this.pnlView = new System.Windows.Forms.Panel();
             this.pnlTools.SuspendLayout();
             this.grpView.SuspendLayout();
             this.grpBorrow.SuspendLayout();
-            this.pnlBooks.SuspendLayout();
+            this.pnlView.SuspendLayout();
             this.SuspendLayout();
             // 
             // lvwBooks
@@ -52,9 +52,9 @@
             this.lvwBooks.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lvwBooks.HideSelection = false;
             this.lvwBooks.LargeImageList = this.imgL;
-            this.lvwBooks.Location = new System.Drawing.Point(0, 0);
+            this.lvwBooks.Location = new System.Drawing.Point(7, 7);
             this.lvwBooks.Name = "lvwBooks";
-            this.lvwBooks.Size = new System.Drawing.Size(762, 690);
+            this.lvwBooks.Size = new System.Drawing.Size(732, 660);
             this.lvwBooks.SmallImageList = this.imgS;
             this.lvwBooks.TabIndex = 0;
             this.lvwBooks.UseCompatibleStateImageBehavior = false;
@@ -66,15 +66,18 @@
             this.pnlTools.Controls.Add(this.grpView);
             this.pnlTools.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlTools.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.pnlTools.Location = new System.Drawing.Point(762, 0);
+            this.pnlTools.Location = new System.Drawing.Point(754, 8);
+            this.pnlTools.Margin = new System.Windows.Forms.Padding(5);
             this.pnlTools.Name = "pnlTools";
-            this.pnlTools.Size = new System.Drawing.Size(469, 690);
+            this.pnlTools.Size = new System.Drawing.Size(469, 674);
             this.pnlTools.TabIndex = 1;
             // 
             // grpView
             // 
+            this.grpView.BackColor = System.Drawing.Color.LightSteelBlue;
             this.grpView.Controls.Add(this.cmbView);
             this.grpView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpView.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.grpView.Location = new System.Drawing.Point(0, 0);
             this.grpView.Name = "grpView";
             this.grpView.Size = new System.Drawing.Size(469, 133);
@@ -84,11 +87,13 @@
             // 
             // grpBorrow
             // 
+            this.grpBorrow.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.grpBorrow.Controls.Add(this.lstBorrow);
             this.grpBorrow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpBorrow.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.grpBorrow.Location = new System.Drawing.Point(0, 133);
             this.grpBorrow.Name = "grpBorrow";
-            this.grpBorrow.Size = new System.Drawing.Size(469, 557);
+            this.grpBorrow.Size = new System.Drawing.Size(469, 541);
             this.grpBorrow.TabIndex = 1;
             this.grpBorrow.TabStop = false;
             this.grpBorrow.Text = "借書清單 :";
@@ -110,7 +115,7 @@
             this.lstBorrow.ItemHeight = 47;
             this.lstBorrow.Location = new System.Drawing.Point(3, 53);
             this.lstBorrow.Name = "lstBorrow";
-            this.lstBorrow.Size = new System.Drawing.Size(463, 501);
+            this.lstBorrow.Size = new System.Drawing.Size(463, 485);
             this.lstBorrow.TabIndex = 0;
             // 
             // imgL
@@ -139,30 +144,35 @@
             this.imgS.Images.SetKeyName(6, "Book7.bmp");
             this.imgS.Images.SetKeyName(7, "Book8.bmp");
             // 
-            // pnlBooks
+            // pnlView
             // 
-            this.pnlBooks.Controls.Add(this.lvwBooks);
-            this.pnlBooks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBooks.Location = new System.Drawing.Point(0, 0);
-            this.pnlBooks.Name = "pnlBooks";
-            this.pnlBooks.Size = new System.Drawing.Size(762, 690);
-            this.pnlBooks.TabIndex = 2;
+            this.pnlView.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnlView.Controls.Add(this.lvwBooks);
+            this.pnlView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlView.Location = new System.Drawing.Point(8, 8);
+            this.pnlView.Margin = new System.Windows.Forms.Padding(5);
+            this.pnlView.Name = "pnlView";
+            this.pnlView.Padding = new System.Windows.Forms.Padding(7);
+            this.pnlView.Size = new System.Drawing.Size(746, 674);
+            this.pnlView.TabIndex = 2;
             // 
             // frmBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1231, 690);
-            this.Controls.Add(this.pnlBooks);
+            this.Controls.Add(this.pnlView);
             this.Controls.Add(this.pnlTools);
             this.Name = "frmBooks";
+            this.Padding = new System.Windows.Forms.Padding(8);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "圖書管理";
             this.Load += new System.EventHandler(this.frmBooks_Load);
             this.pnlTools.ResumeLayout(false);
             this.grpView.ResumeLayout(false);
             this.grpBorrow.ResumeLayout(false);
-            this.pnlBooks.ResumeLayout(false);
+            this.pnlView.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -177,7 +187,7 @@
         private System.Windows.Forms.ComboBox cmbView;
         private System.Windows.Forms.ImageList imgL;
         private System.Windows.Forms.ImageList imgS;
-        private System.Windows.Forms.Panel pnlBooks;
+        private System.Windows.Forms.Panel pnlView;
     }
 }
 
