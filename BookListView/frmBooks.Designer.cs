@@ -72,6 +72,10 @@
             this.imgL.Images.SetKeyName(5, "Book6.bmp");
             this.imgL.Images.SetKeyName(6, "Book7.bmp");
             this.imgL.Images.SetKeyName(7, "Book8.bmp");
+            this.imgL.Images.SetKeyName(8, "Book9.bmp");
+            this.imgL.Images.SetKeyName(9, "Book10.bmp");
+            this.imgL.Images.SetKeyName(10, "Book11.bmp");
+            this.imgL.Images.SetKeyName(11, "Book12.bmp");
             // 
             // imgS
             // 
@@ -85,6 +89,10 @@
             this.imgS.Images.SetKeyName(5, "Book6.bmp");
             this.imgS.Images.SetKeyName(6, "Book7.bmp");
             this.imgS.Images.SetKeyName(7, "Book8.bmp");
+            this.imgS.Images.SetKeyName(8, "Book9.bmp");
+            this.imgS.Images.SetKeyName(9, "Book10.bmp");
+            this.imgS.Images.SetKeyName(10, "Book11.bmp");
+            this.imgS.Images.SetKeyName(11, "Book12.bmp");
             // 
             // pnlTools
             // 
