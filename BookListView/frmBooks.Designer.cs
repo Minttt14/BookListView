@@ -128,6 +128,7 @@
             this.lstBorrow.Name = "lstBorrow";
             this.lstBorrow.Size = new System.Drawing.Size(463, 485);
             this.lstBorrow.TabIndex = 0;
+            this.lstBorrow.DoubleClick += new System.EventHandler(this.lstBorrow_DoubleClick);
             // 
             // grpView
             // 

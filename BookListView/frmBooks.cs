@@ -80,5 +80,25 @@ namespace BookListView
                 }
             }
         }
+        /// <summary>
+        /// 雙擊借書清單時，觸發取消借閱功能
+        /// </summary>
+        private void lstBorrow_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstBorrow.SelectedIndex != -1)
+            {
+                // 取得目前選取的書名
+                string selectedBook = lstBorrow.SelectedItem.ToString();
+
+                // 跳出確認視窗
+                DialogResult dr = MessageBox.Show($"確定要取消借閱「{selectedBook}」嗎?", "取消借閱", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dr == DialogResult.Yes)
+                {
+                    // 從 ListBox 清單中移除選取的項目
+                    lstBorrow.Items.RemoveAt(lstBorrow.SelectedIndex);
+                }
+            }
+        }
     }
 }
